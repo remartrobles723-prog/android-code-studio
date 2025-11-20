@@ -58,13 +58,14 @@ configurations.all {
 
 android {
   namespace = BuildConfig.packageName
+  ndkVersion = "29.0.14033849"
 
   defaultConfig {
     applicationId = BuildConfig.packageName
     vectorDrawables.useSupportLibrary = true
   }
 
-signingConfigs {
+/*signingConfigs {
     create("custom") {
         val keyStorePath = "${rootProject.projectDir}/signing/signing-key.jks"
         val keyStoreFile = file(keyStorePath)
@@ -77,7 +78,7 @@ signingConfigs {
         keyAlias = "AndroidCS"
         keyPassword = signing_keyPassword
     }
-}
+}*/
 
   androidResources { generateLocaleConfig = true }
 
@@ -88,12 +89,12 @@ signingConfigs {
 
   buildTypes {
     debug {
-      signingConfig = signingConfigs.getByName("custom")
+     // signingConfig = signingConfigs.getByName("custom")
     }
 
     release {
       isShrinkResources = false
-      signingConfig = signingConfigs.getByName("custom")
+     // signingConfig = signingConfigs.getByName("custom")
     }
   }
 

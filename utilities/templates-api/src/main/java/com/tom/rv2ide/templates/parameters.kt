@@ -407,7 +407,8 @@ enum class NdkVersion(val version: String) {
   NDK_27B("27.0.12077973"),
   NDK_27D("27.2.12479018"),
   NDK_28C("28.0.12674087"),
-  NDK_29B("29.0.12682434");
+  NDK_29B("29.0.12682434"),
+  NDK_29C("29.0.14033849");
 
   fun displayName(): String = version
 }

@@ -26,6 +26,7 @@ plugins {
 android {
     namespace = "com.termux.shared"
     packaging.jniLibs.useLegacyPackaging = true
+    ndkVersion = "29.0.14033849"
 
     defaultConfig {
         externalNativeBuild {
